@@ -1,0 +1,94 @@
+.lasso {
+	-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+	left: 0;
+	right: 0;
+	margin: auto;
+	margin-top: 35px;
+	width: 150px;
+	height: 48px;
+	cursor: pointer;
+  }
+  
+  .lasso-text {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	font-size: 16px;
+	letter-spacing: 3px;
+	line-height: 1.1;
+	text-align: left;
+	color: rgb(190, 128, 64);;
+  }
+  
+  .lasso-border {
+	height: 2px;
+	background: rgb(190, 128, 64);;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	-webkit-transition: left 0.5s;
+	-webkit-transition: left 0.5s, background .1s;
+	-o-transition: left 0.5s, background .1s;
+	transition: left 0.5s, background .1s;
+  }
+  
+  .lasso-wrap {
+	float: right;
+	width: 58px;
+	position: relative;
+	height: 58px;
+	margin-right: -25px;
+  }
+  
+  .lasso-triangle {
+	position: absolute;
+	height: 10px;
+	left: 0;
+	right: -2px;
+	margin: auto;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+			transform: translateY(-50%);
+	display: block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 6px;
+	border-color: transparent transparent transparent rgb(190, 128, 64);;
+	z-index: 999;
+  }
+  
+  .lasso-wrap svg {
+	z-index: 10;
+  }
+  
+  .lasso-wrap svg circle {
+	fill: none;
+	stroke: rgb(190, 128, 64);;
+	stroke-width: .5;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-dasharray: 39 39;
+	stroke-dashoffset: -39;
+	-webkit-transition: stroke-dashoffset 0.5s;
+	-o-transition: stroke-dashoffset 0.5s;
+	transition: stroke-dashoffset 0.5s;
+  }
+  
+  .lasso:hover .lasso-border {
+	left: 100%;
+	right: 0px;
+	background: rgb(190, 128, 64);;
+  }
+  
+  .lasso:hover .lasso-wrap svg circle {
+	stroke-dashoffset: 0;
+	-webkit-transition: stroke-dashoffset 0.5s;
+	-o-transition: stroke-dashoffset 0.5s;
+	transition: stroke-dashoffset 0.5s;
+	stroke: rgb(190, 128, 64);;
+  }
