@@ -35,7 +35,7 @@ const RecipeList: React.FC = () => {
 
   return (
     <div className="p-4 flex flex-col items-center justify-center min-h-screen">
-      <h1 className="title text-3xl md:text-4xl font-bold mb-6 text-center border-b-2 border-[#be8040] ">
+      <h1 className="title text-3xl md:text-4xl font-bold mb-6 text-center ">
         Receitas Sugeridas
       </h1>
       <CardCarousel recipes={recipes} />

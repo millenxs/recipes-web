@@ -28,9 +28,9 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ recipes }) => {
   };
 
   return (
-    <div className="carousel-wrapper relative w-full max-w-[800px] mt-6">
+    <div className="relative w-full max-w-[800px] mt-6">
       <div
-        className="carousel flex space-x-4 overflow-hidden pb-4 snap-x snap-mandatory scroll-smooth"
+        className="flex space-x-4 overflow-hidden pb-4 snap-x snap-mandatory scroll-smooth"
         ref={carouselRef}
       >
         {recipes.map((recipe) => (
