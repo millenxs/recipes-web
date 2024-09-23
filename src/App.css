@@ -6,25 +6,22 @@
 @tailwind utilities;
 
 html, body {
-  margin: 0;
-  height: 100%;
   font-family: "Overpass Mono", monospace;
-}
-
-/* Garantir que o root se adapte, mas a navbar esteja fora do fluxo de centralização */
-#root {
-  margin: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column; /* Alinha navbar no topo e conteúdo principal abaixo */
   background-image: 
     radial-gradient(circle, rgba(0, 0, 0, 0.6) 90%, transparent 100%),
     url('https://zigis.com.au/wp-content/uploads/2014/05/holiday2013_front.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
+  background-position: center; 
+}
+
+#root {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Alinha navbar no topo e conteúdo principal abaixo */
   justify-content: flex-start; /* Evita que a navbar seja centralizada */
   position: relative;
-  padding: 20px;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
 }
@@ -59,8 +56,8 @@ html, body {
 
 input {
   background: none;
-  border: 1px solid rgb(190, 128, 64);;
-  width: 350px;
+  border: 1px solid rgb(190, 128, 64);
+  
 }
 
 /* Responsividade */
@@ -97,5 +94,5 @@ input {
 }
 
 .container{
-	margin-top: 100px;
+	margin-top: 90px;
 }

@@ -26,6 +26,7 @@ nav ul li {
 	padding: 1rem;
 }
   
+  
 .navbar-link{
 	border: none;
 	background: none;
@@ -76,4 +77,14 @@ nav ul li {
 	transform-origin: bottom left;
   }
   
-  
+/* toggleMenu */
+
+.fill-current{
+	margin-left: 30px;
+	color: rgb(190, 128, 64);
+}
+
+.nav-open {
+	margin-top: 150px;
+	margin-left: 10px;
+}
