@@ -1,13 +1,33 @@
-## Running React on Replit
+# Recipe Web App
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
+Este é um site de receitas web construído em **React** que utiliza a API pública do [TheMealDB](https://www.themealdb.com/api.php) para buscar detalhes de receitas. O aplicativo permite aos usuários visualizar uma lista de receitas e obter informações detalhadas sobre cada uma delas.
 
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
+## Funcionalidades
 
-Using the two in conjunction is one of the fastest ways to build a web app.
+- **Listar Receitas**: O usuário pode visualizar uma lista de receitas disponíveis.
+- **Visualizar Detalhes da Receita**: Cada receita tem uma página dedicada com detalhes como ingredientes, instruções e imagem.
+- **Busca por ID**: O aplicativo utiliza o ID da receita para buscar detalhes específicos usando a API pública.
+- **Interface Simples e Responsiva**: Desenvolvido com **React** e estilizado para proporcionar uma navegação simples e intuitiva.
 
-### Getting Started
-- Hit run
-- Edit [App.tsx](#src/App.tsx) and watch it live update!
+## Tecnologias Utilizadas
 
-By default, Replit runs the `dev` script, but you can configure it by changing the `run` field in the [configuration file](#.replit). Here are the vite docs for [serving production websites](https://vitejs.dev/guide/build.html)
+- **React** (com **TypeScript**): Para criar a interface de usuário dinâmica e componentes reutilizáveis.
+- **Axios**: Para fazer requisições HTTP à API pública.
+- **React Router DOM**: Para gerenciar as rotas e permitir navegação entre diferentes páginas.
+- **TheMealDB API**: API utilizada para buscar informações sobre as receitas.
+  
+## Como Configurar e Rodar o Projeto
+
+### Pré-requisitos
+
+- **Node.js** (versão 14 ou superior)
+- **npm** ou **yarn**
+
+### Instalação
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/recipe-web-app.git
+``
+2. 
