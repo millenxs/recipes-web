@@ -13,14 +13,15 @@ html, body {
   background-repeat: no-repeat;
   background-size:cover;
   background-position: center; 
+  background-attachment: fixed;
 }
 
 #root {
   margin: 0;
   height: 100vh;
   display: flex;
-  flex-direction: column; /* Alinha navbar no topo e conteúdo principal abaixo */
-  justify-content: flex-start; /* Evita que a navbar seja centralizada */
+  flex-direction: column; 
+  justify-content: flex-start; 
   position: relative;
   opacity: 0;
   animation: fadeIn 1.5s ease-in-out forwards;
@@ -28,30 +29,29 @@ html, body {
 
 /* Centralizar apenas o conteúdo abaixo da navbar */
 .content {
-  flex: 1; /* Faz o conteúdo ocupar o restante da tela */
+  flex: 1; 
   display: flex;
-  align-items: center; /* Centraliza verticalmente o conteúdo */
-  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; 
+  justify-content: center; 
 }
 
 .title {
   font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 54px; 
-  line-height: 50px;
+  font-size: 64px; 
+  line-height: 64px;
   text-align: center; 
-  margin-top: 30px;
   color: rgb(190, 128, 64);
 }
 
 .paragraph {
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
   width: 100%;
+  margin-top: 10px;
   padding: 7px;
   text-align: center;
-  margin-top: 16px;
 }
 
 input {
@@ -94,5 +94,5 @@ input {
 }
 
 .container{
-	margin-top: 90px;
+	padding-top: 150px; 
 }

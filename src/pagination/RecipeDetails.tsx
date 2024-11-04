@@ -19,7 +19,7 @@ const RecipeDetails: React.FC = () => {
     const fetchRecipeDetails = async () => {
       try {
         const response = await axios.get(
-          `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`,
+          `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
         );
         if (response.data.meals && response.data.meals.length > 0) {
           setRecipe(response.data.meals[0]);
@@ -32,35 +32,48 @@ const RecipeDetails: React.FC = () => {
     fetchRecipeDetails();
   }, [id]);
 
-  if (!recipe) return <div>Carregando...</div>;
-
-  // Convertendo as instruções em uma lista ordenada
-  const instructionsList = recipe.strInstructions
-    .split("\r\n") // Divide o texto com base em quebras de linha
-    .filter((instruction) => instruction.trim() !== "") // Remove linhas vazias
-    .map((instruction, index) => <li key={index}>{instruction}</li>);
+  if (!recipe) return <div>Loading...</div>;
 
   return (
-    <div className="container mx-auto box-content max-h-[500px] w-[550px] p-4 border-4 md:box-content overflow-y-scroll">
-      <div className="flex items-center space-x-4 mb-4">
-        <img
-          src={`${recipe.strMealThumb}/preview`}
-          alt={recipe.strMeal}
-          className="w-[120px] h-[120px] object-cover"
-        />
-        <h1 className="title text-[16px] font-semibold">{recipe.strMeal}</h1>
+    <div className="container flex flex-col items-center justify-center p-4 max-h-screen mt-12">
+      <h1 className="text-4xl font-bold text-[#BD7F3F] mb-4 text-center">
+        {recipe.strMeal}
+      </h1>
+      <img
+        src={recipe.strMealThumb}
+        alt={recipe.strMeal}
+        className="w-64 h-64 object-cover rounded-lg shadow-lg mb-4"
+      />
+      <p className="max-w-xl text-center text-gray-50">
+        {recipe.strInstructions}
+      </p>
+      
+      <div className="flex justify-start items-start py-6">
+        <button
+          className="bg-slate-100/75 text-center w-40 rounded-2xl min-h-[36px] relative text-black text-base font-semibold group"
+          type="button"
+          onClick={() => navigate(-1)}
+        >
+          <div className="bg-[#BD7F3F] rounded-xl h-[30px] w-1/4 flex items-center justify-center absolute left-1 top-[4px] group-hover:w-[152px] z-10 duration-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1024 1024"
+              height="25px"
+              width="25px"
+            >
+              <path
+                d="M224 480h640a32 32 0 1 1 0 64H224a32 32 0 0 1 0-64z"
+                fill="#000000"
+              ></path>
+              <path
+                d="m237.248 512 265.408 265.344a32 32 0 0 1-45.312 45.312l-288-288a32 32 0 0 1 0-45.312l288-288a32 32 0 1 1 45.312 45.312L237.248 512z"
+                fill="#000000"
+              ></path>
+            </svg>
+          </div>
+          <p className="translate-x-2">Go Back</p>
+        </button>
       </div>
-      <ol className="list-decimal space-y-2 text-sm">
-        {instructionsList}
-      </ol>
-
-      {/* Adicionando o botão para voltar à lista de receitas */}
-      <button
-        onClick={() => navigate(-1)}
-        className="cursor-pointer bg-white mt-4 inline-flex items-center justify-center gap-2 rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-[#a9bf93] hover:text-[#000] h-9 rounded-md px-3 border border-[#000] hover:border-[#a9bf93]"
-      >
-        Voltar para a lista de receitas
-      </button>
     </div>
   );
 };

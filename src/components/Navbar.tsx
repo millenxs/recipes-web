@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -86,24 +86,6 @@ const Navbar = () => {
                 to="/"
               >
                 Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={closeMenu} // Fecha o menu ao clicar no link
-                className="navbar-link text-white hover:text-gray-200"
-                to="/categorias"
-              >
-                Categorias
-              </Link>
-            </li>
-            <li>
-              <Link
-                onClick={closeMenu} // Fecha o menu ao clicar no link
-                className="navbar-link text-white hover:text-gray-200"
-                to="/contato"
-              >
-                Contato
               </Link>
             </li>
           </ul>

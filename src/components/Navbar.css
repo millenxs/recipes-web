@@ -1,6 +1,6 @@
 nav {
 	position: fixed;
-	top: 10px;
+	top: 0;
 	z-index: 1;
 	display: flex;
 	width: 100%;
@@ -87,4 +87,8 @@ nav ul li {
 .nav-open {
 	margin-top: 150px;
 	margin-left: 10px;
+}
+
+.container {
+	padding-top: 60px; /* Ajuste com base na altura da navbar */
 }
